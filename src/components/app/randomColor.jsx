@@ -1,11 +1,11 @@
 import React from "react";
 
-const presentColors = () => {
+const PresentColors = ({backgroundColor}) => {
         return (
             <>
             <h1>Random Colors</h1>
             <div className = 'Color' style = {{
-                backgroundColor: this.state.color,
+                backgroundColor,
                 height: 150,
                 width: 150,
                 margin: 20
@@ -15,4 +15,4 @@ const presentColors = () => {
     }
 
 
-export default presentColors
+export default PresentColors
