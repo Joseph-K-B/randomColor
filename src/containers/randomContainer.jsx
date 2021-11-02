@@ -1,23 +1,23 @@
 import React, { Component } from "react";
+import { render } from "react-dom";
 
-class randomContainer extends Component {
+colors = ['red', 'green', 'blue', 'purple', 'black']
+
+class colorContainer extends Component{
+
     state = {
-        currentColor: 'green'
+        color: 'gold'
     }
 
-    render() {
-        return (
-            <>
-            <h1>Random Colors</h1>
-            <div style = {{
-                backgroundColor: this.state.currentColor,
-                height: 150,
-                width: 150,
-                margin: 20
-            }}></div>
-            </>
-        )
+componentDidMount() {
+const random = () => {
+    return Math.floor(Math.random() * colors.length)
     }
+  }
+  render() {
+      return random 
+  }
 }
 
-export default randomContainer
+
+export default colorContainer

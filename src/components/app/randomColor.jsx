@@ -1,9 +1,18 @@
 import React from "react";
 
-colors = ['red', 'green', 'blue', 'purple']
+const presentColors = () => {
+        return (
+            <>
+            <h1>Random Colors</h1>
+            <div style = {{
+                backgroundColor: this.state.currentColor,
+                height: 150,
+                width: 150,
+                margin: 20
+            }}></div>
+            </>
+        )
+    }
 
-const random = () => {
-    return Math.floor(Math.random() * colors.length)
-}
 
-export default random
+export default presentColors
