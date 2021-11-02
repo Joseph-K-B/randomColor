@@ -12,7 +12,7 @@ class ColorContainer extends Component{
 componentDidMount() {
     // useEffect(() => {
         const interval = setInterval(() => { const random = () => {
-            return Math.floor(Math.random() * colors.length)
+            return colors[Math.floor(Math.random() * colors.length)]
             }
             this.setState({ color: random });
         }, 1000);
