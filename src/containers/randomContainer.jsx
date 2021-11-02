@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class randomColor extends component {
+class randomContainer extends Component {
     state = {
         currentColor: 'green'
     }
@@ -10,7 +10,7 @@ class randomColor extends component {
             <>
             <h1>Random Colors</h1>
             <div style = {{
-                backgroundColor: currentColor,
+                backgroundColor: this.state.currentColor,
                 height: 150,
                 width: 150,
                 margin: 20
@@ -20,4 +20,4 @@ class randomColor extends component {
     }
 }
 
-export default randomColor
+export default randomContainer
