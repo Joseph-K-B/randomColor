@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import randomContainer from '../../containers/randomContainer';
+import colorContainer from '../../containers/RandomContainer';
 
 
 export default function App() {
-  return <randomContainer />;
+  return <colorContainer />;
 }

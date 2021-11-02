@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { render } from "react-dom";
+import presentColors from "../components/app/randomColor";
 
 colors = ['red', 'green', 'blue', 'purple', 'black']
 
@@ -10,12 +11,19 @@ class colorContainer extends Component{
     }
 
 componentDidMount() {
-const random = () => {
-    return Math.floor(Math.random() * colors.length)
-    }
+    useEffect(() => {
+        const interval = setInterval(() => { const random = () => {
+            return Math.floor(Math.random() * colors.length)
+            }
+            this.setState({ color: random });
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
+   
   }
+
   render() {
-      return random 
+      return <presentColors backgroundColor = {this.state.color} />
   }
 }
 

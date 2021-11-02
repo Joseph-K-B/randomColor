@@ -4,8 +4,8 @@ const presentColors = () => {
         return (
             <>
             <h1>Random Colors</h1>
-            <div style = {{
-                backgroundColor: this.state.currentColor,
+            <div className = 'Color' style = {{
+                backgroundColor: this.state.color,
                 height: 150,
                 width: 150,
                 margin: 20
